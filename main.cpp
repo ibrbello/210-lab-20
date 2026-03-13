@@ -67,15 +67,15 @@ int main() {
     chairPtr->setPrices(121.21, 232.32, 414.14);
     chairPtr->print();
 
-    //creating dynamic chair object with constructor
-    // Chair *livingChair = new Chair(3);
-    // livingChair->setPrices(525.25, 434.34, 252.52);
-    // livingChair->print();
-    // delete livingChair;
-    // livingChair = nullptr;
+    // creating chair object using parameter constructor
+    cout << "Using parameter constructor to create a chair object...";
+    cout << endl << endl;
+    double * tempPrices = {100.0,34.5,334.7};
+    Chair *livingChair = new Chair(6, tempPrices);
 
     //creating dynamic array of chair objects
     cout << "Using default constructor to create chair objects..." << endl;
+    cout << endl;
     Chair *collection = new Chair[SIZE];
     for (int i = 0; i < SIZE; i++) {
         collection[i] = Chair();
